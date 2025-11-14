@@ -10,7 +10,7 @@ st.title("Taller Avanzado: Solucion del Campo Electroestatico 2D (MDF)")
 st.sidebar.header("Parametros de Simulacion")
 
 N = st.sidebar.slider("Tamaño de la malla (N x N)", 10, 100, 20)
-tolerancia = st.sidebar.number_input("Tolerancia (ε)", 1e-3, 1e-8, 1e-5, format="%.8f")
+tolerancia = st.sidebar.number_input("Tolerancia (ε)", 1e-8, 1e-3, 1e-5, format="%.8f")
 
 st.sidebar.subheader("Voltajes de Contorno (V)")
 v_arriba = st.sidebar.number_input("V Arriba", value=0.0)

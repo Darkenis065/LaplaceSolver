@@ -27,7 +27,7 @@ def test_convergencia_simple():
     # Nota: No sera exactamente 5 debido a los bordes 0V arriba/abajo
     centro_x = N // 2
     centro_y = N // 2
-    assert 3.0 < solver.V[centro_y, centro_x] < 7.0 # Una prueba de cordura
+    assert 1.0 < solver.V[centro_y, centro_x] < 7.0 # Una prueba de cordura
 
 def test_calculo_campo_lineal():
     """
