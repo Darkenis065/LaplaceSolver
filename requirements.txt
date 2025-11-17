@@ -1,4 +1,4 @@
-# Dependencias de la aplicación
+# Dependencias de la aplicación.
 streamlit
 numpy
 matplotlib
