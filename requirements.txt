@@ -1,0 +1,7 @@
+# Dependencias de la aplicación.
+streamlit
+numpy
+matplotlib
+
+# Y tu propio paquete (ya está en PyPI)
+campo-estatico-mdf

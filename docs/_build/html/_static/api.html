@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referencia de la API &mdash; documentación de LaplaceSolver - 14/11/2025</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=6c23172b"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            LaplaceSolver
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Referencia de la API</a><ul>
+<li><a class="reference internal" href="#campo_estatico_mdf.solver.LaplaceSolver2D"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D</span></code></a><ul>
+<li><a class="reference internal" href="#campo_estatico_mdf.solver.LaplaceSolver2D.calcular_campo_e"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D.calcular_campo_e()</span></code></a></li>
+<li><a class="reference internal" href="#campo_estatico_mdf.solver.LaplaceSolver2D.resolver_jacobi"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D.resolver_jacobi()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D</span></code></a><ul>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D.calcular_campo_e()</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">LaplaceSolver2D.resolver_jacobi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LaplaceSolver</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Referencia de la API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-campo_estatico_mdf.solver">
+<span id="referencia-de-la-api"></span><h1>Referencia de la API<a class="headerlink" href="#module-campo_estatico_mdf.solver" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="campo_estatico_mdf.solver.LaplaceSolver2D">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">campo_estatico_mdf.solver.</span></span><span class="sig-name descname"><span class="pre">LaplaceSolver2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_izquierda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_derecha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_arriba</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_abajo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#campo_estatico_mdf.solver.LaplaceSolver2D" title="Link to this definition"></a></dt>
+<dd><p>Resuelve la Ecuacion de Laplace en 2D usando el Metodo de Diferencias Finitas (MDF)
+y un metodo iterativo de Jacobi.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="campo_estatico_mdf.solver.LaplaceSolver2D.calcular_campo_e">
+<span class="sig-name descname"><span class="pre">calcular_campo_e</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#campo_estatico_mdf.solver.LaplaceSolver2D.calcular_campo_e" title="Link to this definition"></a></dt>
+<dd><p>Calcula el Campo Electrico (E = -grad(V)) usando diferenciacion numerica.
+(Cumple RF1.4)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="campo_estatico_mdf.solver.LaplaceSolver2D.resolver_jacobi">
+<span class="sig-name descname"><span class="pre">resolver_jacobi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iteraciones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#campo_estatico_mdf.solver.LaplaceSolver2D.resolver_jacobi" title="Link to this definition"></a></dt>
+<dd><p>Resuelve el sistema usando el metodo iterativo de Jacobi.
+(Cumple RF1.2 y RF1.3)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">campo_estatico_mdf.solver.</span></span><span class="sig-name descname"><span class="pre">LaplaceSolver2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_izquierda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_derecha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_arriba</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_abajo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Resuelve la Ecuacion de Laplace en 2D usando el Metodo de Diferencias Finitas (MDF)
+y un metodo iterativo de Jacobi.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">calcular_campo_e</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd><p>Calcula el Campo Electrico (E = -grad(V)) usando diferenciacion numerica.
+(Cumple RF1.4)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">resolver_jacobi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerancia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iteraciones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Link to this definition"></a></dt>
+<dd><p>Resuelve el sistema usando el metodo iterativo de Jacobi.
+(Cumple RF1.2 y RF1.3)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Sebastian Acuña, Jose Luis Zamora..</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
